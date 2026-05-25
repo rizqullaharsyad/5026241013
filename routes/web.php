@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\PegawaiController;
 
-Route::get('welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -38,10 +41,22 @@ Route::get('pert5', function () {
 });
 
 Route::get('pert5index', function () {
-    return view('pertemuan5index'); // Contoh jika ingin lari ke index pertemuan 5
+    return view('pertemuan5index');
 });
 
 Route::get('pert5tugas', function () {
-    return view('pertemuan5tugas'); // Contoh jika ingin lari ke index pertemuan 5
+    return view('pertemuan5tugas');
 });
+
+Route::get('/pegawainama/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+//crud tabel pegawai
+Route::get('/pegawai', [PegawaiDBController::class, 'index']);
+Route::get('/pegawaitambah',[PegawaiDBController::class, 'tambah']);
+Route::post('/pegawaistore',[PegawaiDBController::class, 'store']);
+Route::get('/pegawaiedit/{id}',[PegawaiDBController::class, 'edit']);
+Route::post('/pegawaiupdate',[PegawaiDBController::class, 'update']);
+Route::get('/pegawaihapus/{id}',[PegawaiDBController::class, 'hapus']);
+Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
 

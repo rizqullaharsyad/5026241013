@@ -6,7 +6,7 @@
 <body>
 
 	<h1>Tutorial Laravel</h1>
-	<a href="https://www.malasngoding.com/category/laravel">www.malasngoding.com</a>
+	<a href="https://www.malasngoding.com/category/laravel"></a>
     <p>
         Nama : {{$nama}} - <?php echo $nama; ?>
     </p>
