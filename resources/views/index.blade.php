@@ -10,12 +10,13 @@
         <br />
 
         <p>Cari Data Pegawai :</p>
-        <form action="/pegawaicari" method="GET">
-            <input type="text" name="cari" placeholder="Cari Pegawai .." class="form-control">
-            <input type="submit" value="CARI" class="btn btn-secondary">
-        </form>
+	<form action="/pegawaicari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai .." class="form-control">
+		<input type="submit" value="CARI" class="btn btn-secondary">
+	</form>
 
 
+        <br />
         <table class="table table-striped table-hover">
             <tr>
                 <th>Nama</th>
@@ -38,6 +39,9 @@
                 </tr>
             @endforeach
         </table>
+        <ul class="pagination" style="margin:20px 0">
+            {{ $pegawai->links() }}
+        </ul>
         <a href="/pegawaitambah" class="btn btn-primary">Tambah Pegawai Baru</a>
     </center>
 @endsection
