@@ -1,0 +1,66 @@
+<!-- Menghubungkan dengan view template master -->
+@extends('template')
+
+@section('title', 'Kode Soal tagihan_air')
+<!-- isi bagian konten -->
+<!-- cara penulisan isi section yang panjang -->
+@section('konten')
+    <center>
+
+
+        <br />
+        <br />
+
+        <div class="card">
+            <div class="card-header">
+                Input Tagihan Baru
+            </div>
+
+            <div class="card-body">
+                <form action="/tagihanairstore" method="post">
+                    {{ csrf_field() }}
+
+                    <div class="row mb-3">
+                        <label for="nrp" class="col-sm-2 col-form-label">ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="ID" id="id" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="NoMeteran" class="col-sm-2 col-form-label">NoMeteran</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="NoMeteran" id="NoMeteran" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="NilaiAngka" class="col-sm-2 col-form-label">MeterAwal</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="MeterAwal" id="MeterAwal" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="SKS" class="col-sm-2 col-form-label">Meter Akhir</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="MeterAkhir" id="MeterAkhir" class="form-control" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="offset-sm-2 col-sm-10">
+                        <a href="/tagihanair" class="btn btn-info"> Submit</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <br />
+        <br />
+
+    </center>
+@endsection

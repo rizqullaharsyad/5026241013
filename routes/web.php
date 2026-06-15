@@ -9,6 +9,7 @@ use App\Http\Controllers\keranjangController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KursiController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\TagihanAirController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,6 +40,7 @@ Route::post('/pegawaistore', [PegawaiDBController::class, 'store']);
 Route::get('/pegawaiedit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
 
 //CRUD Tabel Keranjang
 Route::get('/keranjangbelanja', [keranjangController::class, 'index_keranjang']);
@@ -66,3 +68,8 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//Tagihan Air
+Route::get('/tagihanair', [TagihanAirController::class, 'index']);
+Route::get('/tagihanairtambah',[TagihanAirController::class, 'tambah']);
+

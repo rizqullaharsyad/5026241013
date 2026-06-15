@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>5026241068 Aiman Rediansyah Abd. Azis</title>
+    <title>5026241013 Rizqullah Arsyad</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/nilaikuliah">PR 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/tagihanair">EAS</a>
                     </li>
 
                 </ul>
