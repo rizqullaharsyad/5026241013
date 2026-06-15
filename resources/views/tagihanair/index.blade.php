@@ -19,16 +19,16 @@
                 <tr>
                     <td>{{ $t->ID }}</td>
                     <td>{{ $t->NoMeteran }}</td>
-                    <td>Rp {(MeterAwal-MeterAkhir)}</td>
-                    <td>Rp {(Penggunaan * 5000 }}</td>
+                    <td>Rp {{ number_format($t->MeterAkhir - $t->MeterAwal, 0, ',', '.') }}</td>
+                    <td>Rp {{ number_format(($t->MeterAkhir - $t->MeterAwal)* 5000) }}</td>
                     <td>
                         |
-                        <a href="/tagihanairtambah/" class="btn btn-danger">Input Tagihan Baru</a>
+
                     </td>
                 </tr>
             @endforeach
         </table>
-
+        <a href="/eas/tambah/" class="btn btn-danger">Input Tagihan Baru</a>
     </center>
 
 @endsection

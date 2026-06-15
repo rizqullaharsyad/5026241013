@@ -70,6 +70,6 @@ Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.upda
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
 //Tagihan Air
-Route::get('/tagihanair', [TagihanAirController::class, 'index']);
-Route::get('/tagihanairtambah',[TagihanAirController::class, 'tambah']);
-
+Route::get('/eas', [TagihanAirController::class, 'index']);
+Route::get('/eas/tambah',[TagihanAirController::class, 'tambah']);
+Route::post('/eas/store', [TagihanAirController::class, 'store']);

@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/nilaikuliah">PR 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/tagihanair">EAS</a>
+                        <a class="nav-link" href="/eas">EAS</a>
                     </li>
 
                 </ul>

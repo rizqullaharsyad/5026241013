@@ -17,7 +17,7 @@
             </div>
 
             <div class="card-body">
-                <form action="/tagihanairstore" method="post">
+                <form action="/eas/store" method="post">
                     {{ csrf_field() }}
 
                     <div class="row mb-3">
@@ -52,7 +52,11 @@
 
                     <div class="row">
                         <div class="offset-sm-2 col-sm-10">
-                        <a href="/tagihanair" class="btn btn-info"> Submit</a>
+                        <a href="/eas" class="btn btn-info"> Submit</a>
+
+                    <div class="row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <input type="submit" value="Simpan Data" class="btn btn-primary">
                         </div>
                     </div>
 
